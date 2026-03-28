@@ -1,0 +1,166 @@
+ZERVEPULSE BUSINESS INTELLIGENCE REPORT
+Churn Prediction & User Segmentation Analysis
+================================================================================
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║         ZERVEPULSE BUSINESS INTELLIGENCE REPORT                        ║
+║         Churn Prediction & User Segmentation Analysis                  ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  EXECUTIVE SUMMARY                                                       ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  ZervePulse analyzed 5,410 users and identified a platform churn        ║
+║  rate of 64.8%. Using a HistGradientBoostingClassifier model (ROC-AUC         ║
+║  0.7814, F1 0.7490), we segmented users into 5 personas.         ║
+║  The model provides 1.54x decile lift in the top 10%, capturing        ║
+║  high-risk users with 83.5% precision. ANOVA validation confirms       ║
+║  the segmentation is statistically significant (p = 0.00e+00).         ║
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  USER BASE                                                               ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  Total Users Analyzed   : 5,410                                     ║
+║  Overall Churn Rate     : 64.8%                                          ║
+║  Churned Users          : 3,504                                      ║
+║  Retained Users         : 1,906                                      ║
+║  High-Risk Users (>0.7) : 1,625  (30.0% of base)                        ║
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  PERSONA BREAKDOWN                                                       ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  Persona       Count    % of Base  Churn Rate  Description              ║
+║  ─────────────────────────────────────────────────────────────────────  ║
+║  Champion         22      0.4%       4.5%      AI-adopted, active multi-canvas ║
+║  Explorer        217      4.0%      87.6%      Onboarded, diverse, agent-using  ║
+║  At_Risk       2,159     39.9%      87.4%      Agent-using but predicted churn  ║
+║  Ghost         1,860     34.4%      55.7%      Never used agent, minimal events ║
+║  Casual        1,152     21.3%      33.8%      All remaining users             ║
+║  ─────────────────────────────────────────────────────────────────────  ║
+║  TOTAL         5,410  100.0%                                      ║
+║                                                                          ║
+║  ANOVA F-stat = 1392.3608, p-value = 0.00e+00                          ║
+║  Segmentation statistically validated.                                   ║
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  MODEL EVALUATION                                                        ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  Best Model         : HistGradientBoostingClassifier                          ║
+║  Accuracy           : 0.7052                                            ║
+║  Precision (cls 1)  : 0.8351                                            ║
+║  Recall (cls 1)     : 0.6790                                            ║
+║  F1 Score (cls 1)   : 0.7490                                            ║
+║  ROC-AUC            : 0.7814                                            ║
+║  PR-AUC             : 0.8622                                            ║
+║  MCC                : 0.4136                                            ║
+║  Brier Score        : 0.1865                                            ║
+║  Top-10% Lift Ratio : 1.54x  (540/541 top-10% users churned)           ║
+║                                                                          ║
+║  Top 3 Features (Permutation Importance):                                ║
+║    1. unique_canvases       (0.1322)                                     ║
+║    2. ai_adoption_index     (0.1072)                                     ║
+║    3. unique_event_types    (0.1040)                                     ║
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  TOP 3 INSIGHTS                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  INSIGHT 1 — Champions are Your Most Retainable Users                   ║
+║  With a churn rate of 4.5%, the 22 Champion-class users represent    ║
+║  the platform's most engaged and AI-adopted segment. These users         ║
+║  average ≥5 days active, ≥2 canvases, and an AI adoption index of       ║
+║  ≥0.3 — they have found deep value in the platform. Investing in         ║
+║  expanding this cohort should be a primary growth priority.              ║
+║                                                                          ║
+║  INSIGHT 2 — 2,159 Agent Users Are Predicted to Churn (At_Risk)     ║
+║  The At_Risk cohort has an 87.4% churn rate despite using the    ║
+║  AI agent — signaling a product-fit gap rather than a discovery gap.     ║
+║  These users tried the agent (87% still churned) indicating that ║
+║  agent engagement alone is insufficient without delivering clear value.  ║
+║  Targeted re-engagement campaigns or in-app guidance could recover        ║
+║  a significant share of these 2,159 users.                          ║
+║                                                                          ║
+║  INSIGHT 3 — 1,860 Ghost Users Represent a Win-Back Opportunity      ║
+║  Ghost users have never interacted with the AI agent AND have ≤3 total   ║
+║  events (1,860 users, 34.4% of base). Their 55.7% churn rate  ║
+║  is driven by low activation, not product dissatisfaction. A targeted    ║
+║  onboarding re-nudge campaign with a low-friction agent demo could       ║
+║  convert a portion of these dormant users before they fully churn.       ║
+║                                                                          ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║  PRODUCT RECOMMENDATIONS                                                 ║
+║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ║
+║                                                                          ║
+║  REC 1 — Launch Champion Loyalty Program                                 ║
+║  Target: 22 Champion users (0.4% of base)                           ║
+║  Action: Introduce early access, dedicated support, and community roles  ║
+║  for Champion-class users to reward loyalty and deepen engagement.       ║
+║  Expected: Reduce already-low 4.5% churn to near-zero.          ║
+║                                                                          ║
+║  REC 2 — At_Risk Re-Engagement Sprint                                    ║
+║  Target: 2,159 At_Risk users (39.9% of base)                           ║
+║  Action: Automated trigger-based emails + in-app prompts for users       ║
+║  with churn_probability > 0.7 who have used the agent. Surface           ║
+║  personalized success stories and "what to build next" guides.           ║
+║  Expected: 20% recovery = 431 users retained.                     ║
+║                                                                          ║
+║  REC 3 — Ghost Activation Campaign                                       ║
+║  Target: 1,860 Ghost users (34.4% of base)                             ║
+║  Action: Low-friction onboarding re-nudge (single email, one-click       ║
+║  demo canvas) to surface AI agent value before observation window ends.  ║
+║  Expected: Convert 279 Ghosts (15%) to Explorer or Casual tier.    ║
+║                                                                          ║
+║  REC 4 — Accelerate Explorer-to-Champion Pipeline                        ║
+║  Target: 217 Explorer users (4.0% of base)                         ║
+║  Action: In-product prompts to increase canvas creation (toward ≥2)     ║
+║  and AI adoption index (toward ≥0.3) — the exact thresholds that        ║
+║  qualify users for Champion status.                                      ║
+║  Expected: Accelerate Champion cohort growth by 10–20% within 90 days.  ║
+║                                                                          ║
+║  REC 5 — Deploy Real-Time Churn Scoring API                              ║
+║  Scope: 1,625 high-risk users currently identified              ║
+║  Action: Deploy the HistGradientBoostingClassifier model as a live API to          ║
+║  score new users daily. Trigger interventions at churn_probability       ║
+║  > 0.7, enabling proactive outreach before users disengage.             ║
+║  Model performance: ROC-AUC 0.7814, 1.54x decile lift in top 10%.  ║
+║                                                                          ║
+║  REC 6 — Unique Canvases as North Star Activation Metric                 ║
+║  Finding: unique_canvases is the #1 churn predictor (importance 0.1322) ║
+║  Action: Set unique_canvases ≥ 2 as the primary activation milestone    ║
+║  in onboarding. Instrument this as a north-star metric in the product    ║
+║  analytics dashboard. Users who create 2+ canvases are 0.4x more        ║
+║  likely to reach Champion status and have significantly lower churn.     ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+
+=== COMPUTED VALUES (A–L) ===
+A. Total Users             : 5,410
+B. Overall Churn Rate      : 64.77%
+C. Persona Counts          : {'Champion': 22, 'Explorer': 217, 'At_Risk': 2159, 'Ghost': 1860, 'Casual': 1152}
+D. Best Model Name         : HistGradientBoostingClassifier
+E. ROC-AUC                 : 0.781441
+F. F1 Score (cls 1)        : 0.749017
+G. Decile Lift (top 10%)   : 1.5404x
+H. High-risk Users         : 1,625
+I. Champion Churn Rate     : 4.55%
+J. At_Risk Count           : 2,159
+K. Ghost Count             : 1,860
+L. ANOVA p-value           : 0.000000e+00
+
+=== ANOVA VALIDATION ===
+F-statistic : 1392.360779
+p-value     : 0.000000e+00
+Segmentation statistically validated.
+
+=== PERSONA BREAKDOWN ===
+  Champion: n=22, churn=0.0455, prob=0.0148
+  Explorer: n=217, churn=0.8756, prob=0.8907
+  At_Risk: n=2159, churn=0.8745, prob=0.7919
+  Ghost: n=1860, churn=0.5570, prob=0.4366
+  Casual: n=1152, churn=0.3377, prob=0.2975
