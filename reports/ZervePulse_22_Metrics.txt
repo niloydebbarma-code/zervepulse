@@ -1,0 +1,117 @@
+ZERVEPULSE — COMPLETE EVALUATION SUMMARY
+Best Model: HistGradientBoosting
+================================================================================
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        ZERVEPULSE — COMPLETE EVALUATION SUMMARY                            ║
+║        Best Model: HistGradientBoosting                                     ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║                                                                              ║
+║  [1] MODEL PERFORMANCE                                                       ║
+║  Accuracy            : 0.7052                                            ║
+║  Precision (cls 1)   : 0.8351                                            ║
+║  Recall (cls 1)      : 0.6790                                            ║
+║  F1 Score (cls 1)    : 0.7490                                            ║
+║  ROC-AUC             : 0.7814                                            ║
+║  PR-AUC              : 0.8622                                            ║
+║  MCC                 : 0.4136                                            ║
+║  Cohen's Kappa       : 0.4009                                            ║
+║  Brier Score         : 0.1865                                            ║
+║  Top-10% Decile Lift : 1.5404x (540/541 top-10% users churned)        ║
+║                                                                              ║
+║  [2] BEHAVIORAL INTELLIGENCE                                                 ║
+║  Mean DAU/MAU (Retained)    : 0.9731                                    ║
+║  Mean DAU/MAU (Churned)     : 0.9999                                    ║
+║  Fast onboarding churn rate : 65.0%                                         ║
+║  Med  onboarding churn rate : 67.3%                                         ║
+║  Slow onboarding churn rate : 58.7%                                         ║
+║  Never used agent churn rate: 0.0%                                         ║
+║  Top CLV Persona            : Builder (Agent+Deployed)                    ║
+║  Top CLV Value              : 2.16 credits x months                       ║
+║  Users with DAU/MAU > 0.5  : 5,089                                          ║
+║  Cumul. gain top 10%        : 15.4% churners captured                          ║
+║                                                                              ║
+║  [3] PLATFORM HEALTH                                                         ║
+║  Day  1 Retention  : 100.0%                                              ║
+║  Day  7 Retention  : 5.2%                                              ║
+║  Day 30 Retention  : 2.0%                                              ║
+║                                                                              ║
+║  [4] BUSINESS IMPACT                                                         ║
+║  High-risk users (prob>0.7) : 1,625                                          ║
+║  Users saved (20% rate)     : 325.0                                        ║
+║  Revenue saved (credits)    : 135.99                                   ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+=== Detailed Metrics ===
+
+[MODEL PERFORMANCE]
+  Accuracy: 0.705176
+  Precision (cls 1): 0.835088
+  Recall (cls 1): 0.679030
+  F1 (cls 1): 0.749017
+  ROC-AUC: 0.781441
+  PR-AUC: 0.862215
+  MCC: 0.413566
+  Cohen's Kappa: 0.400853
+  Brier Score: 0.186532
+
+[DECILE LIFT]
+  Top-10% users: 541
+  Churners in top-10%: 540
+  Lift ratio: 1.540357x
+  % churners captured: 15.41%
+
+[CUMULATIVE GAIN BY DECILE]
+  10%: 15.41%
+  20%: 30.74%
+  30%: 45.23%
+  40%: 56.45%
+  50%: 69.55%
+  60%: 75.88%
+  70%: 84.16%
+  80%: 94.15%
+  90%: 99.06%
+  100%: 100.00%
+
+[FEATURE IMPORTANCE — TOP 3 (SHAP proxy via Permutation Importance)]
+  1. unique_canvases: 0.132239
+  2. ai_adoption_index: 0.107172
+  3. unique_event_types: 0.103946
+
+[ONBOARDING FRICTION]
+  Fast (0-10m): n=5094, churn_rate=0.6498, mean_prob=0.5617
+  Medium (10-60m): n=98, churn_rate=0.6735, mean_prob=0.6987
+  Slow (60-1440m): n=218, churn_rate=0.5872, mean_prob=0.5878
+  Never: n=0, churn_rate=0.0000, mean_prob=0.0000
+
+[CLV BY PERSONA]
+  Agent Explorer (Agent Only): CLV=0.00, n=1611
+  Basic User (Minimal Engagement): CLV=0.00, n=1777
+  Onboarded (No Agent): CLV=0.00, n=9
+  Power User (Agent+Onboard+Deploy): CLV=0.00, n=5
+  Python User (SDK Only): CLV=0.00, n=873
+  Engaged (Agent+Onboarded): CLV=0.06, n=216
+  Python Developer (SDK+Agent): CLV=0.20, n=913
+  Builder (Agent+Deployed): CLV=2.16, n=6
+
+[RETENTION]
+  Day 1 : 100.00%
+  Day 7 : 5.25%
+  Day 30: 1.96%
+
+[REVENUE SAVED]
+  Mean credits (retained users): 0.4184
+  High-risk users (prob>0.7): 1,625
+  Users saved: 325.0
+  Revenue saved: 135.99
+
+[DAU/MAU STICKINESS]
+  Mean DAU/MAU retained: 0.9731
+  Mean DAU/MAU churned:  0.9999
+  Users with DAU/MAU > 0.5: 5,089
+
+
+ZervePulse reports 22 metrics — churn analysis.
