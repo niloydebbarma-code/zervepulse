@@ -41,10 +41,10 @@ zervepulse/
 
 Watch the published demo on YouTube:
 
-[YouTube Demo Video](https://youtu.be/BLEFkihgGqQ)
+[YouTube Demo Video](https://youtu.be/X_cJOyEydsk)
 
 <div align="center">
-  <a href="https://youtu.be/BLEFkihgGqQ" target="_blank">
+  <a href="https://youtu.be/X_cJOyEydsk" target="_blank">
     <img src="assets/yt_template.png" alt="Watch the ZervePulse Demo on YouTube" width="480"/>
   </a>
   <br/>
