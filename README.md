@@ -52,6 +52,7 @@ Watch the published demo on YouTube:
 </div>
 
 ---
+
 ## 📝 Prompt Documentation
 
 Full prompts, reasoning, and outputs for every analysis step: [docs/prompts_documentation.md](docs/prompts_documentation.md)
@@ -62,7 +63,7 @@ Full prompts, reasoning, and outputs for every analysis step: [docs/prompts_docu
 
 All raw data and configuration files are available in the `zervepulse_canvas` branch of the official GitHub repository:
 
-[Access raw files and configs (zervepulse_canvas branch)](https://github.com/niloydebbarma-code/zervepulse/tree/zervepulse_canvas)
+[Access raw files and configs (zervepulse_canvas branch)](https://github.com/niloydebbarma-code/zervepulse/tree/zervepulse_canvas/canvas_code  )
 
 ---
 
@@ -238,6 +239,8 @@ ANOVA validation: F-statistic = 1,392, p < 0.0001
 
 ---
 
+
+
 ## Zerve Platform Usage
 
 This project demonstrates Zerve's full capability stack:
@@ -250,6 +253,41 @@ This project demonstrates Zerve's full capability stack:
 
 ---
 
+## Results Visualizations
+
+<p align="center">
+  <img src="results/feature_importance.png" width="30%"/>
+  <img src="results/shap_beeswarm.png" width="30%"/>
+  <img src="results/feature_correlation.png" width="30%"/>
+</p>
+<p align="center"><em>Feature Importance — SHAP Beeswarm — Feature Correlation</em></p>
+
+<p align="center">
+  <img src="results/optimised_comparison.png" width="30%"/>
+  <img src="results/confusion_matrices.png" width="30%"/>
+  <img src="results/roc_curves.png" width="30%"/>
+</p>
+<p align="center"><em>Optimized Pipeline — Confusion Matrices — ROC Curves</em></p>
+
+<p align="center">
+  <img src="results/pr_curves.png" width="30%"/>
+  <img src="results/cumulative_gain.png" width="30%"/>
+  <img src="results/onboarding_friction.png" width="30%"/>
+</p>
+<p align="center"><em>PR Curves — Cumulative Gain — Onboarding Friction</em></p>
+
+<p align="center">
+  <img src="results/clv_by_persona.png" width="30%"/>
+  <img src="results/retention_curve.png" width="30%"/>
+  <img src="results/dau_mau_stickiness.png" width="30%"/>
+</p>
+<p align="center"><em>CLV by Persona — Retention Curve — DAU/MAU Stickiness</em></p>
+
+<p align="center">
+  <img src="results/persona_donut.png" width="30%"/>
+  <img src="results/behavioral_profiles_persona.png" width="30%"/>
+</p>
+<p align="center"><em>Persona Donut — Behavioral Profiles</em></p>
 ## Tech Stack
 
 | Component | Technology |

@@ -64,7 +64,10 @@ Block name: Optimized Pipeline
 - str columns: 69 → 18 (51 converted to category)
 - category columns created: 37
 - float32 columns downcast from float64: 13
-- Before vs after dtype distribution chart rendered (optimised_comparison.png)
+- Before vs after dtype distribution chart rendered:
+
+![Optimized Comparison](../results/optimised_comparison.png)
+
 - Memory footprint measurably reduced with comparison table
 
 ---
