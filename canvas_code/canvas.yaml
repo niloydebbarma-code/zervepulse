@@ -1,0 +1,548 @@
+id: a15ae300-6a9d-4609-a160-72fb0da3f594
+name: ZervePulse
+project_id: 4460743f-eb95-41c6-9532-139a5fcf7fb7
+global_imports: []
+python_global_imports: ''
+r_global_imports: ''
+requirements: []
+linux_packages: []
+environment_variables: []
+is_public: true
+organization_id: 7e618590-acc4-422f-9361-66e081326fad
+layers:
+- blocks:
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Applies five dtype optimizations to 409K-row user retention dataset:\
+      \ drops 33 redundant columns, downcasts float64\u2192float32 and integers, converts\
+      \ 37 string columns to category, and defragments memory. Reduces 577.5 MB footprint\
+      \ for serverless Feature Engineering feasibility."
+    height: 1000
+    id: 0d22d4fa-a3d6-4963-ad53-47c34c0603d7
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Dtype Optimisation Strategy
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 6000
+    y: 51000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Summarizes ZervePulse analytics pipeline completion: 4-section Streamlit\
+      \ dashboard for churn prediction (ROC-AUC 0.7814) with KPI cards, user intelligence\
+      \ lookup, risk leaderboard (5,410 users), and insights explorer\u2014deployed\
+      \ on dark-themed interface with Zerve brand compliance."
+    height: 1000
+    id: 112187c0-95fb-49a6-acbe-18f95cad0484
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Pipeline Completion Summary
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 2000
+    y: 47500
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Comprehensive retention analysis dashboard showing churn prediction\
+      \ model performance, feature importance, and platform stickiness metrics across\
+      \ 5,410 users with 54% decile lift, 1,625 high-risk user identification, and\
+      \ 3.1\xD7 retention gap via DAU/MAU ratio."
+    height: 1000
+    id: 14fc63fa-e8f4-4878-95ff-b87f876d742d
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Platform Retention Metrics & Operational Intelligence
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 28000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: 'Comprehensive churn prediction pipeline: loads user engagement data,
+      balances classes with SMOTE, trains 4 ML models (Gradient Boosting, Hist Gradient
+      Boosting, Random Forest, Logistic Regression), evaluates against 9 metrics,
+      and visualizes results via confusion matrices, ROC & precision-recall curves.'
+    height: 1000
+    id: 1b1bcf86-3804-4eaa-b12d-2c03258b6549
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Churn Prediction Pipeline
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 20000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Registers deployment metadata for ZervePulse Streamlit dashboard.\
+      \ Configures four sections\u2014Command Center (KPI cards & charts), User Intelligence\
+      \ Lookup (persona scoring & risk drivers), Churn Risk Leaderboard (5,410-user\
+      \ paginated table with filtering/export), and Insights Explorer (analytical\
+      \ charts & product recommendations)\u2014using segmentation model & user data\
+      \ from upstream blocks."
+    height: 1000
+    id: 1f834686-de47-433b-828e-207e7b192fbc
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Dashboard Deployment Configuration
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 36000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Documents a comprehensive data profiling analysis across 8 pipeline
+      stages for a 409K-row, 107-column telemetry dataset, quantifying memory footprint
+      (~577.5 MB), null rates, cardinality, redundancy, and dtype optimization potential
+      to enable efficient downstream feature engineering.
+    height: 1000
+    id: 220594bf-c8cd-4765-9b60-a853fd0b9f3d
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Data Pipeline Profiling Overview
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 0
+    y: 51000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: 'Evaluates the churn prediction model across 5,410 users, computing
+      8 business metrics: decile lift, cumulative gain, feature importance, onboarding
+      friction, customer lifetime value by persona, retention curves, revenue impact,
+      and DAU/MAU stickiness. Generates visualizations and a 22-metric summary report
+      for operational decision-making.'
+    height: 1000
+    id: 24964915-d3de-41d0-8570-9c9f53a29897
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Business Intelligence Evaluation Framework
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 24000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: 'Segments 5,410 users into five behavioral personas (Champion, Power
+      User, Builder, At Risk, Ghost) using rule-based decision logic on activation
+      flags. Validates persona separability via ANOVA, re-evaluates the HistGradientBoostingClassifier
+      under the new schema, and generates BI artifacts: persona profiles, churn analysis,
+      and executive business report with retention recommendations.'
+    height: 1000
+    id: 31d224ca-99fc-4aa8-828a-73a89370cd8a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Persona Segmentation & BI Report Architecture
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 30000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Profiles dataset quality and performance with detailed analysis of
+      memory usage, null rates, cardinality, redundancy, skew, and optimization recommendations
+    height: 1000
+    id: 32a0deaf-861c-4e7c-8593-2f9b838d48f1
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Pipeline Benchmark Report
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 2000
+    y: 51000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Segments 5,410 users into 5 personas (Champion, Explorer, At Risk,
+      Ghost, Casual) based on AI adoption and engagement, then generates visual reports
+      and BI metrics including churn analysis, behavioral profiles, and model performance
+      statistics.
+    height: 1000
+    id: 407bc55e-c8b7-48b1-a47d-3f1173dfa50a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Persona Segmentation & BI Report
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 32000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Builds user engagement features for churn prediction by aggregating
+      event data across 23 metrics (adoption index, session depth, canvas usage, tool
+      diversity, SDK share, etc.), then creates derived signals like churn velocity
+      and feature breadth to enable retention analysis.
+    height: 1000
+    id: 4bae2bc7-e3fe-4d0f-8105-3772703bfefa
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Feature Engineering
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 14000
+    y: 52400
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Complete technical documentation for ZervePulse user churn prediction\
+      \ system. Covers research question, 14-day churn definition, 6-phase ML pipeline\
+      \ (profiling\u2192optimization\u2192feature engineering\u2192model training\u2192\
+      evaluation\u2192persona segmentation), 23 engineered features, 4-model comparison\
+      \ showing HistGradientBoosting winner (ROC-AUC 0.7814, F1 0.7490), feature importance\
+      \ rankings, 5 user personas with ANOVA validation (p<0.0001), and business metrics\
+      \ including 1.54\xD7 decile lift on 5,410 Zerve users."
+    height: 1000
+    id: 5c8bc1a3-e7a0-4135-9b71-37370a556ce7
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Project Documentation
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 0
+    y: 6000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Summarizes churn prediction model performance across 4 classifiers\
+      \ (HistGradientBoosting winner, 9 metrics), feature importance rankings (unique_canvases\
+      \ most predictive), and business impact (1.53\xD7 decile lift). Exports trained\
+      \ model, scored customer dataset, evaluation charts, and metrics comparison\
+      \ table."
+    height: 1000
+    id: 8c7a21c5-f044-460c-93b5-58adcedead88
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Churn Model Performance & Feature Importance
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 22000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Optimizes user retention dataset by dropping redundant columns, downcasting
+      float/int types, converting low-cardinality strings to categories, then compares
+      memory and performance metrics before/after with visualizations.
+    height: 1000
+    id: b0ae1c5a-0cb5-422e-aa4b-47229d98ce8a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Optimized Pipeline
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 8000
+    y: 51000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Documents the plan to train 4 classification models (Gradient Boosting,
+      Histogram Boosting, Random Forest, Logistic Regression) on 5,410 user features
+      with SMOTE-balanced oversampling to correct 65/35% churn class imbalance. Models
+      evaluated on 9 metrics; winner selected by F1+ROC-AUC score with permutation-based
+      feature importance analysis.
+    height: 1000
+    id: b14c6d75-b92b-4095-aa72-a0674404bd38
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Churn Prediction Model Training Plan
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 18000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: 'Documents comprehensive profiling results for a 409K-row event dataset:
+      identifies 577.5 MB memory bloat, 89 high-null columns, 33 redundant columns,
+      and 22 high-cardinality fields; recommends dtype optimization (float32, category)
+      to reduce footprint.'
+    height: 1000
+    id: cdca6514-d5d9-4827-9743-5b26f1a0ed77
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Pipeline Benchmark Findings
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 4000
+    y: 51000
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Evaluates a churn prediction model across 8 business metrics: decile\
+      \ lift, cumulative gain, feature impact, onboarding friction, CLV by persona,\
+      \ model performance, business value summary, and actionable recommendations\u2014\
+      generating styled visualizations for stakeholder reporting."
+    height: 1000
+    id: d206000a-c6d0-4240-bddb-d1ca8204991a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse 8-Metric Evaluation
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 26000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Aggregates 409,287-row event log to 5,410 users, engineering 23 behavioral
+      features including 5 custom ZervePulse metrics (AI adoption, session depth,
+      feature breadth, churn velocity) and a 14-day churn label for classification
+      modeling.
+    height: 1000
+    id: d684218f-4461-4cf0-990b-91719a076e18
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Feature Engineering Architecture
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 12000
+    y: 52400
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Validates engineered features (24 columns, 5,410 users) and churn\
+      \ signal strength via Pearson correlation. Confirms churn_velocity (r=+0.924)\
+      \ and observation_days (r=\u22120.884) as strongest predictors; 64.8% churn\
+      \ rate in dataset."
+    height: 1000
+    id: ddb67494-095c-4274-8f1a-c0976c5f4080
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Feature Engineering Output & Churn Signal Validation
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 16000
+    y: 52400
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: Summarizes persona segmentation analysis revealing 5 user personas
+      (Champion, Power User, Builder, At Risk, Ghost) with churn rates ranging from
+      4.55% to 95%+. Presents validated HistGradientBoosting model performance (ROC-AUC
+      0.7814) and ANOVA-confirmed behavioral distinctions, plus actionable business
+      insights for retention.
+    height: 1000
+    id: e1711837-62f5-4056-8c9b-cf56a7577058
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Persona Segmentation Analysis & Business Intelligence Findings
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 34000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: 'Confirms ZervePulse Dashboard deployment settings and documents
+      all 4 sections: Command Center (metrics & charts), User Intelligence Lookup
+      (risk analysis), Churn Risk Leaderboard (5,410 users), and Insights Explorer
+      (product recommendations).'
+    height: 1000
+    id: eac3438e-a9fe-44c2-b0a6-09dfe2f6ad19
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: ZervePulse Dashboard Deployment
+    parent_id: null
+    properties: {}
+    status: 3
+    type: 1
+    variables: null
+    width: 1600
+    x: 38000
+    y: 53800
+  - auto_size: false
+    canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    compute_settings: null
+    description: "Presents optimized pipeline performance metrics showing 61% memory\
+      \ reduction (577.5\u2192228.1 MB) and 3.7\xD7 speed improvement via dtype optimization\
+      \ and column pruning, with preserved data fidelity for downstream feature engineering."
+    height: 1000
+    id: f1d0daf4-2b0e-43f9-ab1f-d303e382ff83
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    name: Optimized Pipeline Performance Results
+    parent_id: null
+    properties: {}
+    status: 1
+    type: 4
+    variables: null
+    width: 1600
+    x: 10000
+    y: 51000
+  canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+  edges:
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 0540aaa1-abe3-49eb-8918-d72d68a69d40
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 32a0deaf-861c-4e7c-8593-2f9b838d48f1
+    target: cdca6514-d5d9-4827-9743-5b26f1a0ed77
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 0d70e677-67fe-434d-9baa-ed9ecb2589f5
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: f1d0daf4-2b0e-43f9-ab1f-d303e382ff83
+    target: d684218f-4461-4cf0-990b-91719a076e18
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 0f38a904-c5e2-4d12-aa97-443fbdd826d4
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: b14c6d75-b92b-4095-aa72-a0674404bd38
+    target: 1b1bcf86-3804-4eaa-b12d-2c03258b6549
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 2d89e356-2eb9-4ed7-83b1-fb06942bc141
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: b0ae1c5a-0cb5-422e-aa4b-47229d98ce8a
+    target: f1d0daf4-2b0e-43f9-ab1f-d303e382ff83
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 4460cfb0-b842-4fd8-b69c-550563f50336
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: f1d0daf4-2b0e-43f9-ab1f-d303e382ff83
+    target: 4bae2bc7-e3fe-4d0f-8105-3772703bfefa
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 4b1fb236-ebb5-4bdc-8106-1f65726b3112
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: d206000a-c6d0-4240-bddb-d1ca8204991a
+    target: 14fc63fa-e8f4-4878-95ff-b87f876d742d
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 5380d30d-d4d5-4eda-a312-1d9b0b661b6d
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 407bc55e-c8b7-48b1-a47d-3f1173dfa50a
+    target: e1711837-62f5-4056-8c9b-cf56a7577058
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 55ebe877-eb40-4407-83d0-72ad02e21160
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: ddb67494-095c-4274-8f1a-c0976c5f4080
+    target: b14c6d75-b92b-4095-aa72-a0674404bd38
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 67cd4d42-c916-4ea4-8442-47a7c5c892fa
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 14fc63fa-e8f4-4878-95ff-b87f876d742d
+    target: 31d224ca-99fc-4aa8-828a-73a89370cd8a
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 72001d44-d404-4da3-acfb-6f5592130e4b
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: ddb67494-095c-4274-8f1a-c0976c5f4080
+    target: 1b1bcf86-3804-4eaa-b12d-2c03258b6549
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 751c5b08-42f1-41d9-b967-0e2c506e0268
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 1f834686-de47-433b-828e-207e7b192fbc
+    target: eac3438e-a9fe-44c2-b0a6-09dfe2f6ad19
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 7c221758-fdd7-435d-a027-d0b03a10396a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: e1711837-62f5-4056-8c9b-cf56a7577058
+    target: 1f834686-de47-433b-828e-207e7b192fbc
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 7ec50d9c-d903-4dc4-b780-17dff3d2c009
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 1b1bcf86-3804-4eaa-b12d-2c03258b6549
+    target: 8c7a21c5-f044-460c-93b5-58adcedead88
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 8b389349-e792-4d62-b6a2-ba98835a651b
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 8c7a21c5-f044-460c-93b5-58adcedead88
+    target: 24964915-d3de-41d0-8570-9c9f53a29897
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: 9d4ea351-6eb1-48be-bfea-cc63185d2d77
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 4bae2bc7-e3fe-4d0f-8105-3772703bfefa
+    target: ddb67494-095c-4274-8f1a-c0976c5f4080
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: b343d3d3-584e-45f3-9062-06ebac245513
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: d684218f-4461-4cf0-990b-91719a076e18
+    target: 4bae2bc7-e3fe-4d0f-8105-3772703bfefa
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: b68afb63-bfb7-436b-a77b-85ff2abb7a12
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 220594bf-c8cd-4765-9b60-a853fd0b9f3d
+    target: 32a0deaf-861c-4e7c-8593-2f9b838d48f1
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: c0bbed93-65ca-47c2-8ffa-b5ec2453c170
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 0d22d4fa-a3d6-4963-ad53-47c34c0603d7
+    target: b0ae1c5a-0cb5-422e-aa4b-47229d98ce8a
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: c581d7e5-b786-4b4f-89b4-6cda1b3f895c
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 31d224ca-99fc-4aa8-828a-73a89370cd8a
+    target: 407bc55e-c8b7-48b1-a47d-3f1173dfa50a
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: caab67e8-15b9-46ce-bbd0-19a7a0f23f29
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: 24964915-d3de-41d0-8570-9c9f53a29897
+    target: d206000a-c6d0-4240-bddb-d1ca8204991a
+  - canvas_id: a15ae300-6a9d-4609-a160-72fb0da3f594
+    id: fdcb511d-5d84-48b6-a40b-be13dcc9c22a
+    layer_id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+    source: cdca6514-d5d9-4827-9743-5b26f1a0ed77
+    target: 0d22d4fa-a3d6-4963-ad53-47c34c0603d7
+  id: ba9f4e8b-81ff-4235-8eac-8603e215d390
+  name: hackathons Canvas
+  type: 1
+assets: []
